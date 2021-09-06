@@ -11,8 +11,6 @@ namespace dotnet1.Controllers
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
     {
-
-
         private readonly ILogger<WeatherForecastController> _logger;
 
         public WeatherForecastController(ILogger<WeatherForecastController> logger)
@@ -20,7 +18,7 @@ namespace dotnet1.Controllers
             _logger = logger;
         }
 
-        [HttpGet]
+        [HttpGet] // default to /weatherforecast for WeatherForecastController
         public IEnumerable<WeatherForecast> Get()
         {
             var rng = new Random();

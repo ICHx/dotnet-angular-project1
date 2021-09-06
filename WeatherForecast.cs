@@ -40,7 +40,7 @@ namespace dotnet1
             }
         }
 
-        private static Random rng = new Random();
+        private static readonly Random rng = new Random();
 
         private static readonly string[] cold = new[]
         {
@@ -56,5 +56,6 @@ namespace dotnet1
 {
             "Hot", "Sweltering", "Scorching"
         };
-    }
-}
+        
+    } //end of class
+} //end of file
