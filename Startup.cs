@@ -21,7 +21,7 @@ namespace dotnet1
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddResponseCompression();
+            // services.AddResponseCompression();
             services.AddControllersWithViews();
 
             // In production, the Angular files will be served from this directory
@@ -34,6 +34,8 @@ namespace dotnet1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+// todo compression doesn't seem to be working            
+            // app.UseResponseCompression();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
